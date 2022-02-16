@@ -203,7 +203,7 @@ resource "kubernetes_deployment" "kubernetes_dashboard" {
       }
 
       spec {
-        service_account_name = kubernetes_service_account.kubernetes_dashboard.metadata.0.name
+        service_account_name = var.kubernetes_service_account_name
         automount_service_account_token = true
 
         container {
